@@ -118,7 +118,7 @@ class Custom:
         self.counter_ +=1
         if (self.counter_ % 500 == 0) :
             self.counter_ = 0
-            print(self.low_state.motor_state[G1JointIndex.LeftKnee].q )
+            print(self.low_state.imu_state.rpy)
 
     def LowCmdWrite(self):
         self.time_ += self.control_dt_
@@ -137,12 +137,14 @@ class Custom:
 
         elif self.time_ < self.duration_ * 2 :
             #Move Right Wrist
-            ratio = np.clip((self.time_ - self.duration_) / (self.duration_*2), 0.0, 1.0)
-            target_pos = 2.5 
-            calc_q = ratio * target_pos + (1.0 - ratio) * self.low_state.motor_state[G1JointIndex.LeftKnee].q 
+            ratio = np.clip((self.time_ - self.duration_*3) / (self.duration_ * 3), 0.0, 1.0)
+            target_pos = 1.5 # -1.6 to 1.6
+            calc_q = ratio * target_pos + (1.0 - ratio) * self.low_state.motor_state[G1JointIndex.LeftWristRoll].q 
             self.low_cmd.mode_machine = self.mode_machine_
-            self.low_cmd.motor_cmd[G1JointIndex.LeftKnee].q = calc_q
+            self.low_cmd.motor_cmd[G1JointIndex.LeftWristRoll].q = calc_q
 
+
+    
 
         self.low_cmd.crc = self.crc.Crc(self.low_cmd)
         self.lowcmd_publisher_.Write(self.low_cmd)

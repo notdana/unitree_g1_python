@@ -1,4 +1,4 @@
-# Unitree G1 Python SDK (Modified for 23 DOF)
+# Unitree SDK2 in Python Modified for G1 23 DOF
 
 ![Unitree Robotics Support Page for G1](https://support.unitree.com/home/en/G1_developer/about_G1)
 

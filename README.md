@@ -7,15 +7,11 @@ This repository is a modified version of **Unitree SDK2 Python**, specifically a
 
 It provides Python-based communication and control functionalities, allowing users to interface with Unitree G1 seamlessly.
 
----
 
-#Pre-requisites of working with examples included in this repo
+# Pre-requisites of working with examples included in this repo
 
 
 ## Working with the Depth Camera
-
-
-### 🔧 Prerequisites
 
 ```bash
 sudo apt install librealsense2-utils librealsense2-dev
@@ -26,8 +22,6 @@ pip install pyrealsense2 opencv-python ultralytics
 ## Working with Ollama (Local LLM)
 
 Ollama allows you to run local large language models like `llama3` on your machine.
-
-### 🔧 Prerequisites
 
 1. Install Ollama from [https://ollama.com](https://ollama.com)
 2. Pull a model such as `llama3`:
@@ -47,7 +41,7 @@ The Speaker on board of G1 is not connected to the secondary development board, 
 
 #Common Issues & Fixes
 
-## 🛰️ WiFi Connection (Manual Configuration)
+## WiFi Connection (Manual Configuration)
 
 ### 1. Connect to a Network Using `wpa_cli`
 
@@ -123,7 +117,7 @@ sudo reboot
 
 ---
 
-## 🖼️ Virtual Display for Headless Mode (Fix NoMachine Zoom Issue)
+## Virtual Display for Headless Mode (Fix NoMachine Zoom Issue)
 
 If you're running G1 without a physical monitor, set up a virtual screen:
 

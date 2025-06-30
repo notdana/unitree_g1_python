@@ -39,11 +39,25 @@ ollama pull llama3
 pip install ollama
 ```
 
-## Working with Speaker
+## Working with Microphone
 
-The Speaker on board of G1 is not connected to the secondary development board, which means that you will have to connect a speaker through a USB-c port.
+If you want to **work with microphone and speech recognition on the Unitree G1**, you might face issues installing `PyAudio`, which is needed for capturing audio input.
 
+To avoid these issues:
 
+### Install system dependencies
+
+```bash
+sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
+
+```
+
+### Install PyAudio and SpeechRecognition
+
+```bash
+pip install pyaudio
+pip install speechrecognition
+```
 
 #Common Issues & Fixes
 

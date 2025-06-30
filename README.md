@@ -16,6 +16,9 @@ sudo apt install librealsense2-utils librealsense2-dev
 pip install pyrealsense2 opencv-python ultralytics
 ```
 
+## Working with YOLO11
+
+to be added
 
 ## Working with Ollama (Local LLM)
 
@@ -31,7 +34,7 @@ ollama pull llama3
 pip install ollama
 ```
 
-## Working with Microphone
+## Working with Microphone & Speech Recognition
 
 If you want to **work with microphone and speech recognition on the Unitree G1**, you might face issues installing `PyAudio`, which is needed for capturing audio input.
 
